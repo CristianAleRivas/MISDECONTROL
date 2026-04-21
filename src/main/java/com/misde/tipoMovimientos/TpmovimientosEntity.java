@@ -1,4 +1,4 @@
-package com.misde;
+package com.misde.tipoMovimientos;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.*;

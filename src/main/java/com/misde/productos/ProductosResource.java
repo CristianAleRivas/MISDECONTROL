@@ -1,4 +1,4 @@
-package com.misde;
+package com.misde.productos;
 
 import java.util.List;
 

@@ -1,10 +1,11 @@
-package com.misde;
+package com.misde.compras;
 
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
-public class ProductosRepository implements PanacheRepository<ProductosEntity> {
+public class ComprasRepository implements PanacheRepository<ComprasEntity> {
     
 
 }
+

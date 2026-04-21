@@ -1,4 +1,4 @@
-package com.misde;
+package com.misde.tipoMovimientos;
 
 import java.util.List;
 

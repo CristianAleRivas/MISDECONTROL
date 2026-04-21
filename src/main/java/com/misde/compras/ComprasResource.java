@@ -1,4 +1,4 @@
-package com.misde;
+package com.misde.compras;
 
 import java.util.List;
 
