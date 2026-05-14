@@ -2,6 +2,8 @@ package com.misde.compras;
 
 import java.time.LocalDate;
 
+import com.misde.proveedores.ProveedoresEntity;
+
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.*;
 
@@ -20,12 +22,17 @@ public class ComprasEntity extends PanacheEntityBase {
     @Column(name = "TOTAL")
     public Double total;
 
+    @ManyToOne
+    @JoinColumn(name = "IDPROVEEDOR")
+    public ProveedoresEntity proveedor;
+
     public ComprasEntity() {
     }
 
-    public ComprasEntity(LocalDate fecha, Double total) {
+    public ComprasEntity(LocalDate fecha, Double total, ProveedoresEntity proveedor) {
         this.fecha = fecha;
         this.total = total;
+        this.proveedor = proveedor;
     }
 
     public LocalDate getFecha() {
@@ -42,5 +49,13 @@ public class ComprasEntity extends PanacheEntityBase {
 
     public void setTotal(Double total) {
         this.total = total;
+    }
+
+    public ProveedoresEntity getProveedor() {
+        return proveedor;
+    }
+
+    public void setProveedor(ProveedoresEntity proveedor) {
+        this.proveedor = proveedor;
     }
 }

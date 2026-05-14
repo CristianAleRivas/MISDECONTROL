@@ -15,7 +15,7 @@ public class DetalleCompraResource {
     DetalleCompraRepository repository;
 
     @GET
-    public List<DetalleCompraEntity> listar() {
-        return repository.listAll();
+    public List<DetalleCompraEntity> listar(@QueryParam("idCompra") Long idCompra) {
+        return repository.obtenerDetalleCompra(idCompra);
     }
 }
